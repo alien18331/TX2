@@ -20,7 +20,7 @@ Official Web: www.openssl.org/source/
 > sudo tar -zxvf "OpenSSL .gz File"  
   
 Then move to openssl folder  
-> ./config --prefix=/usr/local --openssldir=/usr/local/openssl  
+> sudo ./config --prefix=/usr/local --openssldir=/usr/local/openssl  
 > sudo make  
 > sudo make test  
 > sudo make install  
