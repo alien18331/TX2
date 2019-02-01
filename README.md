@@ -143,17 +143,17 @@ Build opencv (CUDA_ARCH_BIN="6.2" for TX2, or "5.3" for TX1)
         -D WITH_QT=ON -D WITH_OPENGL=ON ..  
 > make -j4  
 > sudo make install  
-
-if Failed..
-> cd ~
-> sudo mkdir opencv
-> cd opencv
-> sudo git clone https://github.com/alien18331/buildOpenCVTX2
-> cd buildOpenCVTX2
-> sudo vim buildOpenCVTX2.sh # if want to change version
-> sudo chmod +x buildOpenCVTX2.sh  
-> sudo bash ./buildOpenCV.sh -s ~/opencv # configure will generate by script
   
+if Failed..  
+> cd ~  
+> sudo mkdir opencv  
+> cd opencv  
+> sudo git clone https://github.com/alien18331/buildOpenCVTX2  
+> cd buildOpenCVTX2  
+> sudo vim buildOpenCVTX2.sh # if want to change version  
+> sudo chmod +x buildOpenCVTX2.sh     
+> sudo bash ./buildOpenCV.sh -s ~/opencv # configure will generate by script  
+   
 To verify the installation:  
   
 > ls /usr/local/lib/python3.5/dist-packages/cv2.*  
