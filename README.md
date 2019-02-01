@@ -155,7 +155,7 @@ return 3.4.0
   
 ### Spyder3  
 > sudo apt install python3-pip python3-pyqt4 python3-pyqt5 python3-pyqt5.qtsvg python3-pyqt5.qtwebkit    
-> sudo pip3 install -U spyder # credit for this method goes to N0rbert  
+> sudo apt-get install spyder3  
 > sudo apt install python3 python3-matplotlib spyder3 ipython3    
   
 install Spyder3  
