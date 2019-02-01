@@ -4,11 +4,11 @@ TX2 Ubuntu Install
 ### Iphone hotspot  
 > sudo apt-add-repository ppa:pmcenery/ppa  
 > sudo apt-get update  
-> sudp apt-get install ipheth-utils  
+> sudo apt-get install ipheth-utils  
   
 ### PIP    
-> sudo apt-get install update  
-> sudo apt-get install upgrade   
+> sudo apt-get update  
+> sudo apt-get upgrade   
 > sudo apt-get install python-pip python3-pip  
 > pip -V  
 > pip3 -V  
