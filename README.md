@@ -80,21 +80,14 @@ Update gcc apt package to the latest version (highly recommended)
 > sudo apt-get install --only-upgrade g++-5 cpp-5 gcc-5  
   
 Install dependencies based on the Jetson Installing OpenCV Guide  
-> sudo apt-get install build-essential make cmake cmake-curses-gui \
-                       g++ libavformat-dev libavutil-dev \
-                       libswscale-dev libv4l-dev libeigen3-dev \
-                       libglew-dev libgtk2.0-dev  
+> sudo apt-get install build-essential make cmake cmake-curses-gui g++ libavformat-dev libavutil-dev ibswscale-dev libv4l-dev libeigen3-dev ibglew-dev libgtk2.0-dev  
   
 Install dependencies for gstreamer stuffs  
-> sudo apt-get install libdc1394-22-dev libxine2-dev \
-                       libgstreamer1.0-dev \
-                       libgstreamer-plugins-base1.0-dev  
+> sudo apt-get install libdc1394-22-dev libxine2-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev  
   
 Install additional dependencies according to the pyimageresearch article  
-> sudo apt-get install libjpeg8-dev libjpeg-turbo8-dev libtiff5-dev \
-                       libjasper-dev libpng12-dev libavcodec-dev  
-> sudo apt-get install libxvidcore-dev libx264-dev libgtk-3-dev \
-                       libatlas-base-dev gfortran  
+> sudo apt-get install libjpeg8-dev libjpeg-turbo8-dev libtiff5-dev libjasper-dev libpng12-dev libavcodec-dev  
+> sudo apt-get install libxvidcore-dev libx264-dev libgtk-3-dev libatlas-base-dev gfortran  
 > sudo apt-get install libopenblas-dev liblapack-dev liblapacke-dev  
   
 Install Qt5 dependencies  
