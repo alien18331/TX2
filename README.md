@@ -137,15 +137,24 @@ Build opencv (CUDA_ARCH_BIN="6.2" for TX2, or "5.3" for TX1)
 > make -j4  
 > sudo make install  
   
-if Failed..  
-> cd ~  
-> sudo mkdir opencv  
-> cd opencv  
-> sudo git clone https://github.com/alien18331/buildOpenCVTX2  
-> cd buildOpenCVTX2  
-> sudo vim buildOpenCVTX2.sh # if want to change version  
-> sudo chmod +x buildOpenCVTX2.sh     
-> sudo bash ./buildOpenCV.sh -s ~/opencv # configure will generate by script  
+if Failed(Makefile:160: recipe for target 'all' failed)..  
+follow: https://blog.csdn.net/jasonzzj/article/details/53587889  
+> sudo apt-get -y remove ffmpeg x264 libx264-dev  
+> sudo apt-get -y install libopencv-dev  
+> sudo apt-get -y install build-essential checkinstall cmake pkg-config yasm  
+> sudo apt-get -y install libjpeg-dev libjasper-dev (fail: libtiff4-dev)  
+> sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libv4l-dev (fail: libxine-dev)  
+> sudo apt-get -y install python3-dev python3-numpy  
+> sudo apt-get -y install libtbb-dev  
+> sudo apt-get -y install libqt4-dev libgtk2.0-dev  
+> sudo apt-get -y install libfaac-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev  
+> sudo apt-get -y install x264 v4l-utils ffmpeg  
+> sudo apt-get -y install libgtk2.0-dev  
+> sudo apt autoremove  
+
+Then try again:
+> make  
+
    
 To verify the installation:  
   
