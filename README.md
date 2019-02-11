@@ -142,7 +142,7 @@ follow: https://blog.csdn.net/jasonzzj/article/details/53587889
 > sudo apt-get -y remove ffmpeg x264 libx264-dev  
 > sudo apt-get -y install libopencv-dev  
 > sudo apt-get -y install build-essential checkinstall cmake pkg-config yasm  
-> sudo apt-get -y install libjpeg-dev libjasper-dev (fail: libtiff4-dev)  
+> sudo apt-get -y install libjpeg-dev libjasper-dev libtiff5-dev (fail: libtiff4-dev)  
 > sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libv4l-dev (fail: libxine-dev)  
 > sudo apt-get -y install python3-dev python3-numpy  
 > sudo apt-get -y install libtbb-dev  
@@ -174,3 +174,13 @@ return 3.4.0
 > sudo apt-get install spyder3  
 > sudo apt install python3 python3-matplotlib spyder3 ipython3    
   
+### Ubuntu update Fail(AppStream Error in Ubuntu 16.04 Xenial)  
+desc:
+> AppStream cache update completed, but some metadata was ignored due to errors.
+  
+Fix step:  
+delete file:/var/cache/app-info/xmls/fwupd.xml  
+> sudo apt install appstream/xenial-backports  
+> appstreamcli —version  
+> sudo appstreamcli refresh —force  
+> sudo apt-get update  
