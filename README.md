@@ -77,10 +77,10 @@ Upgrade all installed apt packages to the latest versions (optional)
 > sudo apt-get dist-upgrade  
   
 Update gcc apt package to the latest version (highly recommended)  
-> sudo apt-get install --only-upgrade g++-5 cpp-5 gcc-5  
+> sudo apt-get install --only-upgrade g++-5 cpp-5 gcc-5 python3-tk   
   
 Install dependencies based on the Jetson Installing OpenCV Guide  
-> sudo apt-get install build-essential make cmake cmake-curses-gui g++ libavformat-dev libavutil-dev ibswscale-dev libv4l-dev libeigen3-dev ibglew-dev libgtk2.0-dev  
+> sudo apt-get install build-essential make cmake cmake-curses-gui g++ libavformat-dev libavutil-dev libswscale-dev libv4l-dev libeigen3-dev libglew-dev libgtk2.0-dev  
   
 Install dependencies for gstreamer stuffs  
 > sudo apt-get install libdc1394-22-dev libxine2-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev  
