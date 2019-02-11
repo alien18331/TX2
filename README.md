@@ -151,10 +151,15 @@ follow: https://blog.csdn.net/jasonzzj/article/details/53587889
 > sudo apt-get -y install x264 v4l-utils ffmpeg  
 > sudo apt-get -y install libgtk2.0-dev  
 > sudo apt autoremove  
-
-Then try again:
+  
+Then try again:  
+> sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local \  
+        -D WITH_CUDA=ON -D CUDA_ARCH_BIN="6.2" -D CUDA_ARCH_PTX="" \  
+        -D WITH_CUBLAS=ON -D ENABLE_FAST_MATH=ON -D CUDA_FAST_MATH=ON \  
+        -D ENABLE_NEON=ON -D WITH_LIBV4L=ON -D BUILD_TESTS=OFF \  
+        -D BUILD_PERF_TESTS=OFF -D BUILD_EXAMPLES=OFF \  
+        -D WITH_QT=ON -D WITH_OPENGL=ON ..  
 > make  
-
    
 To verify the installation:  
   
