@@ -200,13 +200,13 @@ step2.install python libs
   
 step3.Compile DLib  
 #3.1: Compile C++ binary  
-> wget http://dlib.net/files/dlib-19.6.tar.bz2  
-> tar xvf dlib-19.6.tar.bz2  
+> sudo wget http://dlib.net/files/dlib-19.6.tar.bz2  
+> sudo tar xvf dlib-19.6.tar.bz2  
 > cd dlib-19.6/  
-> mkdir build  
+> sudo mkdir build  
 > cd build  
-> cmake ..  
-> cmake --build . --config Release  
+> sudo cmake ..  
+> sudo cmake --build . --config Release  
 > sudo make install  
 > sudo ldconfig  
 > cd ..  
