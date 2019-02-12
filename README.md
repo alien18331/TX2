@@ -215,12 +215,8 @@ Now you can use pkg-config to provide path to Dlib’s include directory and lin
 > pkg-config --libs --cflags dlib-1  
   
 #3.2: Compile Python module  
-# move to dlib's root directory  
+#move to dlib's root directory  
 > cd dlib-19.6  
 > python setup.py install  
-# clean up(this step is required if you want to build dlib for both Python2 and Python3)  
-> rm -rf dist  
-> rm -rf tools/python/build  
-> rm python_examples/dlib.so  
   
 > pip install dlib  
