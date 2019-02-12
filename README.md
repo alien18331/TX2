@@ -186,3 +186,41 @@ delete file:/var/cache/app-info/xmls/fwupd.xml
 > appstreamcli —version  
 > sudo appstreamcli refresh —force  
 > sudo apt-get update  
+  
+### install DLib in Ubuntu
+step1.install OS
+> sudo apt-get install build-essential cmake pkg-config  
+> sudo apt-get install libx11-dev libatlas-base-dev  
+> sudo apt-get install libgtk-3-dev libboost-python-dev  
+  
+step2.install python libs  
+> sudo apt-get install python-dev python-pip python3-dev python3-pip  
+> sudo -H pip3 install -U pip numpy  
+> pip install numpy scipy matplotlib scikit-image scikit-learn ipython  
+  
+step3.Compile DLib  
+#3.1: Compile C++ binary  
+> wget http://dlib.net/files/dlib-19.6.tar.bz2  
+> tar xvf dlib-19.6.tar.bz2  
+> cd dlib-19.6/  
+> mkdir build  
+> cd build  
+> cmake ..  
+> cmake --build . --config Release  
+> sudo make install  
+> sudo ldconfig  
+> cd ..  
+  
+Now you can use pkg-config to provide path to Dlib’s include directory and link Dlib library file.  
+> pkg-config --libs --cflags dlib-1  
+  
+#3.2: Compile Python module  
+# move to dlib's root directory  
+> cd dlib-19.6  
+> python setup.py install  
+# clean up(this step is required if you want to build dlib for both Python2 and Python3)  
+> rm -rf dist  
+> rm -rf tools/python/build  
+> rm python_examples/dlib.so  
+  
+> pip install dlib  
