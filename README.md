@@ -220,3 +220,54 @@ Now you can use pkg-config to provide path to Dlib’s include directory and lin
 > python setup.py install  
   
 > pip install dlib  
+  
+### SSD  
+https://www.ncnynl.com/archives/201706/1781.html  
+https://blog.csdn.net/weixin_42556242/article/details/84840528  
+  
+> $ sudo parted /dev/sda  
+(parted) mklabel gpt  
+
+#check status  
+(parted) print  
+return:  
+> Model: ATA Samsung SSD 850 (scsi)  
+> Disk /dev/sda: 256GB  
+    
+(parted) mkpart primary 0KB  100GB //y,i  
+(parted) mkpart primary 100GB  256GB //y,i
+(parted) print                                                              
+Model: ATA Samsung SSD 850 (scsi)  
+Disk /dev/sda: 256GB  
+Sector size (logical/physical): 512B/512B  
+Partition Table: gpt  
+Disk Flags:   
+  
+Number  Start   End    Size   File system  Name     Flags  
+ 1      17.4kB  100GB  100GB  ext4         primary  
+ 2      100GB   256GB  156GB  ext4         primary  
+   
+(parted) quit  
+  
+#format  
+> sudo mkfs -t ext4 /dev/sda1  
+  
+#dock  
+> cd /mnt/    
+> sudo mkdir usr  
+> sudo mkdir home  
+> sudo mount /dev/sda1 /mnt/usr  
+> sudo mount /dev/sda2 /mnt/home  
+> df -h  
+> sudo cp -a /usr/* /mnt/usr/  
+> sudo cp -a /home/* /mnt/home/  
+> sudo umount /dev/sda1  
+> sudo umount /dev/sda2 
+
+> sudo nano /etc/fstab    
+#添加这两行：     
+> /dev/sda1 /usr ext4 defaults 1 2  
+> /dev/sda2 /home ext4 defaults 1 2  
+> reboot
+
+> dh -h //check
