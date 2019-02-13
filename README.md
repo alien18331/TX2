@@ -237,16 +237,16 @@ return:
 (parted) mkpart primary 0KB  100GB //y,i  
 (parted) mkpart primary 100GB  256GB //y,i
 (parted) print                                                              
-Model: ATA Samsung SSD 850 (scsi)  
-Disk /dev/sda: 256GB  
-Sector size (logical/physical): 512B/512B  
-Partition Table: gpt  
-Disk Flags:   
-  
-Number  Start   End    Size   File system  Name     Flags  
- 1      17.4kB  100GB  100GB  ext4         primary  
- 2      100GB   256GB  156GB  ext4         primary  
-   
+> Model: ATA Samsung SSD 850 (scsi)  
+> Disk /dev/sda: 256GB  
+> Sector size (logical/physical): 512B/512B  
+> Partition Table: gpt  
+> Disk Flags:   
+>   
+> Number  Start   End    Size   File system  Name     Flags  
+> 1      17.4kB  100GB  100GB  ext4         primary  
+> 2      100GB   256GB  156GB  ext4         primary  
+>    
 (parted) quit  
   
 #format  
