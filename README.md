@@ -62,6 +62,15 @@ Check current mode
 Change mode (example change to mode 0)  
 > sudo nvpmodel -m 0  
   
+### Cuda Cudnn Version  
+#Cuda  
+> cat /usr/local/cuda/version.txt  
+or  
+> nvcc  --version  
+   
+#Cudnn  
+> cat /usr/include/cudnn.h | grep CUDNN_MAJOR -A 2  
+    
 ### OpenCV (3.4.0)  
 Remove all old opencv stuffs installed by JetPack (or OpenCV4Tegra)  
 > sudo apt-get purge libopencv*  
