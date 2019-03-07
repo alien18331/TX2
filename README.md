@@ -13,6 +13,10 @@ TX2 Ubuntu Install
 > pip -V  
 > pip3 -V  
   
+PIP Error    
+> sudo python3 -m pip uninstall pip  
+> sudo apt install python3-pip --reinstall  
+  
 ### OpenSSL   
 Official Web: www.openssl.org/source/  
 > sudo mkdir openssl  
@@ -33,7 +37,7 @@ Then move to Python-3.6.6 folder
 > ./configure --enable-optimizations  
 > make  
 > sudo make install  
-  
+   
 Then check python3.6 loc  
 > which python3.6  
 return /usr/local/bin/python3.6  
@@ -287,3 +291,4 @@ return:
 > curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -  
 > sudo apt-get update  
 > sudo apt-get install bazel  
+  
